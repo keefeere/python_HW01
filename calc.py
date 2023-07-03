@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 ##################
 # Calculator by keefeere(c)2023
 ##################
@@ -17,7 +19,8 @@ def divide(x, y):
     try:
         return x / y
     except ZeroDivisionError:
-        return "Error: Cannot divide by zero"
+        print("\nError: Cannot divide by zero")
+        exit()
 
 # Define a function to check if a number is NaN
 # from https://towardsdatascience.com/5-methods-to-check-for-nan-values-in-in-python-3f21ddd17eed
@@ -54,9 +57,9 @@ def get_number(prompt):
             print("Error: Please enter a valid number")
         except KeyboardInterrupt:
             print("\nExiting the program...")
-            break
+            exit()
         finally:
-            print("Input validation completed")
+            print("Input validation completed") #not needed just for test of finally statement
     return num
 
 # Welcome message
@@ -108,8 +111,6 @@ if valid:
     # Format the output and print it with different messages depending on the type of result
     output = format_output(result)
     if isinstance(output, int):   #https://www.geeksforgeeks.org/type-isinstance-python/
-        print("\nThe result is an integer:", output)
-    elif isinstance(output, float):
-        print("\nThe result is a float rounded to 6 digits:", output)
-    else:
         print("\nThe result is:", output)
+    else:
+        print("\nThe result is rounded to 6 digits:", output)
