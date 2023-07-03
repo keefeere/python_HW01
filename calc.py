@@ -107,7 +107,7 @@ if valid:
 
     # Format the output and print it with different messages depending on the type of result
     output = format_output(result)
-    if isinstance(output, int):
+    if isinstance(output, int):   #https://www.geeksforgeeks.org/type-isinstance-python/
         print("\nThe result is an integer:", output)
     elif isinstance(output, float):
         print("\nThe result is a float rounded to 6 digits:", output)
