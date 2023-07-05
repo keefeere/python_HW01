@@ -54,7 +54,7 @@ def get_number(prompt):
             num = float(input(prompt).replace(',', '.'))
             valid = True
         except ValueError:
-            print("Error: Please enter a valid number")
+            print("Error: Please enter a valid number. The program supports only integers written in the decimal number system and decimal fractions with a dot or comma separator")
         except KeyboardInterrupt:
             print("\nExiting the program...")
             exit()
@@ -63,7 +63,7 @@ def get_number(prompt):
     return num
 
 # Welcome message
-print("Welcome to the Calculator Program by keefeere!")
+print("Welcome to the Calculator Program by keefeere! \nThe program supports only integers written in the decimal number system and decimal fractions with a dot or comma separator")
 
 # Prompt the user to select an operation
 print("\nPlease select an operation:")
@@ -91,11 +91,11 @@ while not valid:
 
 # Get and validate the first number if the choice is valid
 if valid:
-    num1 = get_number("Please enter the first number: ")
+    num1 = get_number("Please enter the first number. The number should be an integer written in the decimal number system or decimal fractions with a dot or comma separator: ")
 
 # Get and validate the second number if the first number is valid
 if valid:
-    num2 = get_number("Please enter the second number: ")
+    num2 = get_number("Please enter the second number. The number should be an integer written in the decimal number system or decimal fractions with a dot or comma separator: ")
 
 # Perform the calculation and display the result if both numbers are valid
 if valid:
