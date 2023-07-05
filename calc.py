@@ -51,7 +51,7 @@ def get_number(prompt):
     valid = False
     while not valid:
         try:
-            num = float(input(prompt))
+            num = float(input(prompt).replace(',', '.'))
             valid = True
         except ValueError:
             print("Error: Please enter a valid number")
@@ -76,7 +76,7 @@ print("4. Division")
 valid = False
 while not valid:
     try:
-        choice = int(float(input("\nEnter your choice (1-4): ")))
+        choice = int(float(input("\nEnter your choice (1-4): ").replace(',', '.')))
         if choice in [1, 2, 3, 4]:
             valid = True
         else:
