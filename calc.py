@@ -76,7 +76,7 @@ print("4. Division")
 valid = False
 while not valid:
     try:
-        choice = int(input("\nEnter your choice (1-4): "))
+        choice = int(float(input("\nEnter your choice (1-4): ")))
         if choice in [1, 2, 3, 4]:
             valid = True
         else:
